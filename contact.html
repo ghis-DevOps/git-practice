@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; } 
+    pre { background: #f4f4f4; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <h1>Contact</h1>
+  <p>This page includes a sample workflow snippet for a pull request automation.</p>
+  <pre><code>name: Pull Request Workflow
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Pull request checks triggered"</code></pre>
+</body>
+</html>
